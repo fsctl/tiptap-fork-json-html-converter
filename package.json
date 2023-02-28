@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "workspaces": [
     "demos",
     "packages/*"
@@ -26,7 +26,7 @@
     "release:patch": "lerna version patch --force-publish",
     "release:patch:pre": "lerna version prepatch --force-publish",
     "release:pre": "lerna version prerelease --force-publish",
-    "publish": "npm run build && lerna exec --since --no-private -- npm publish --access public",
+    "publish": "npm run build && npm publish ##lerna exec --since --no-private -- npm publish --access public",
     "pack": "npm run clean:packs && lerna exec -- npm pack",
     "clean:packages": "rm -rf ./packages/*/dist && rm -rf ./packages/pm/*/dist",
     "clean:packs": "rm -rf ./packages/*/*.tgz",
@@ -71,5 +71,7 @@
     "typescript": "^4.5.5",
     "webpack": "^5.68.0"
   },
-  "name": "tiptap"
+  "repository": "https://github.com/fsctl/tiptap-fork-json-html-converter.git",
+  "name": "@fsctl/tiptap-fork-json-html-converter",
+  "version": "2.0.1"
 }
